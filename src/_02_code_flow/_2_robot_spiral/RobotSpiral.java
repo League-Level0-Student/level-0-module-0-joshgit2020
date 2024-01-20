@@ -4,41 +4,60 @@ package _02_code_flow._2_robot_spiral;
  *    Level 0
  */
 
-
 import org.jointheleague.graphical.robot.Robot;
 
+// This recipe draws a square using the Robot
+
 public class RobotSpiral {
+	
+    public static void main(String[] args){
+ 
+    	// This code makes a new Robot
+    	Robot rob = new Robot();
 
-	public static void main(String[] args) {
-		
-		// Create a new Robot
-		
-		// Set your robot's pen down 
-		
-		// SPEED. Set the robot to go at max speed (100)
+        // PEN.  Put the robot's pen down so it can draw, Use this command:
+		rob.penDown();    
 
-		// COUNT. Create an int variable that will count how many lines of the spiral we have drawn.
-			//        Start its value as zero.
+        // SPEED. Make the robot move quickly. Use this command:
+		rob.setSpeed(100);    
+ 
+    	// COUNT. Create an int variable that will count how many sides of the square we have drawn.
+    	//        The start value will be zero because no sides have yet been drawn. Use this code:
+		int count = 0;
+    	
 
-		// LOOP. Start a while loop to repeat the COLOR, DRAW, TURN, and COUNT code below until 50 lines have been drawn
+        // DRAW.  Draw a line. Use this command:
+		while ( count < 50 ) { 
+			rob.setRandomPenColor();
+			rob.move(count*5);    
+			rob.turn(360/7);   
+			count += 1;    
+			rob.setPenWidth(count);
+	// TURN.  Turn 90 degrees. Use this command:
+		  
 
-			// COLOR.   Have the robot set a random pen color:      setRandomPenColor()
+    	
+    	// INCREASE COUNT. Add one to the number of sides that have now been drawn like this:
+	  
+		}
+    	
+    	// Run the program. Did the Robot draw a line and turn?
+    	 
+    	
+        // LOOP.  Make a while loop and move the DRAW, TURN, and INCREASE COUNT code 
+    	//        so it is between the curly braces like the example below. 
+    	//        The code in the loop will now repeat 4 times to draw a square.
+    	
+    	/**     while ( count < 4 ) { 
+    	 *            DRAW
+    	 *            TURN
+    	 *            INCREASE COUNT
+    	 *      }
+    	 **/
+    	
+    	
+    	// Run the program again. Did your Robot draw a square?
 
-			// DRAW.    Move the robot (5*count) pixels
-			//          count is the name of the variable you created earlier
 
-			// TURN.    Turn the robot (360/7) degrees to the right
-
-			// COUNT.   Increase the count of how many lines have been drawn so far ( count+=1 )
-
-			// Change the robot pen width to the current value of the count variable 
-
-
-		//  End the while loop here
-
-		
-		// Run the program. 
-		// Check the pattern against the picture in the recipe. If it matches, you are done!
-		
-	}
+    }
 }
